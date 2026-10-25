@@ -2,6 +2,7 @@
   "name": "The Fortean Calendar",
   "short_name": "Fortean",
   "description": "A cited Fortean event for every day of the year.",
+  "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

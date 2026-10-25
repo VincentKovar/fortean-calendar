@@ -224,7 +224,11 @@ $('about').addEventListener('click', e => { if (e.target === $('about')) $('abou
 /* ---------- pwa ---------- */
 let deferred;
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; $('installBtn').hidden = false; });
-$('installBtn').onclick = async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice; deferred = null; $('installBtn').hidden = true; };
+$('installBtn').onclick = async () => {
+  if (!deferred) { alert('To install: open the browser menu and choose \u201CInstall app\u201D (or \u201CAdd to Home screen\u201D on iPhone, from the Share menu).'); return; }
+  deferred.prompt(); await deferred.userChoice; deferred = null; $('installBtn').hidden = true;
+};
+window.addEventListener('appinstalled', () => { $('installBtn').hidden = true; });
 if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});
 
 render(todayIdx, false);

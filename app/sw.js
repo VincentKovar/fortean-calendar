@@ -1,4 +1,4 @@
-const CACHE = 'fortean-v2';
+const CACHE = 'fortean-v3';
 const ASSETS = ['./', 'index.html', 'styles.css', 'fonts.css', 'app.js', 'data.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   'fonts/CormorantGaramond-500.woff2', 'fonts/CormorantGaramond-500i.woff2', 'fonts/CormorantGaramond-600.woff2',
