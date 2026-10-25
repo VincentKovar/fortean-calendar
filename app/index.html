@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Fortean Calendar</title>
+<meta name="description" content="A cited Fortean event for every day of the year: falls, lights, beasts and things excluded.">
+<meta name="theme-color" content="#2a1709">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Fortean">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="glass">
+  <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+  <div class="rays" aria-hidden="true"></div>
+  <div class="stage" id="stage">
+    <header class="masthead">
+      <h1>The Fortean Calendar</h1>
+      <p class="tag">One recorded oddity for every day of the year, with its source.</p>
+    </header>
+
+    <div class="layout">
+      <section class="instrument" aria-label="Date dial">
+        <div class="dial" id="dial" role="slider" tabindex="0" aria-label="Day of the year" aria-valuemin="0" aria-valuemax="365" aria-valuenow="0">
+          <svg id="dialSvg" viewBox="-500 -500 1000 1000" aria-hidden="true"></svg>
+        </div>
+        <div class="controls" role="group" aria-label="Change date">
+          <button type="button" id="prevMonth" aria-label="Previous month">&#171;</button>
+          <button type="button" id="prevDay" aria-label="Previous day">&#8249;</button>
+          <button type="button" id="today" class="today">Today</button>
+          <button type="button" id="nextDay" aria-label="Next day">&#8250;</button>
+          <button type="button" id="nextMonth" aria-label="Next month">&#187;</button>
+        </div>
+        <p class="hint">Drag the dial, press the arrow keys, or use the buttons. Any day can be opened, including days ahead.</p>
+      </section>
+
+      <section class="plate" id="plate" aria-live="polite" aria-atomic="true">
+        <div class="plate-in" id="plateIn"></div>
+      </section>
+    </div>
+
+    <footer class="foot">
+      <span id="tally"></span>
+      <span class="foot-btns">
+        <button type="button" id="aboutBtn" class="linkish">About the sources</button>
+        <button type="button" id="installBtn" class="linkish" hidden>Install app</button>
+      </span>
+    </footer>
+  </div>
+</div>
+
+<dialog id="about">
+  <form method="dialog"><button class="x" aria-label="Close">&#215;</button></form>
+  <h2>How this calendar is sourced</h2>
+  <div id="aboutBody"></div>
+</dialog>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

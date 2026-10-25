@@ -1,0 +1,5 @@
+research/src/
+research/wp/
+research/__pycache__/
+research/fort_candidates.json
+.DS_Store
