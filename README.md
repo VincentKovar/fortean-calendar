@@ -1,5 +1,7 @@
 <img width="1321" height="1055" alt="Screenshot 2026-10-26 at 1 24 29 PM" src="https://github.com/user-attachments/assets/362c35d3-cba4-4e63-9216-fd8b8029568e" />
 
+https://vincentkovar.github.io/fortean-calendar/
+
 # The Fortean Calendar
 
 PWA: one cited Fortean event per day (366 incl. Feb 29). Vanilla HTML/CSS/JS, no build step.
